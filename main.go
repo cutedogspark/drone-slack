@@ -72,6 +72,7 @@ func main() {
 			Name:   "commit.sha",
 			Usage:  "git commit sha",
 			EnvVar: "DRONE_COMMIT_SHA",
+			Value:  "unsetSHA",
 		},
 		cli.StringFlag{
 			Name:   "commit.ref",
@@ -89,11 +90,13 @@ func main() {
 			Name:   "commit.author",
 			Usage:  "git author name",
 			EnvVar: "DRONE_COMMIT_AUTHOR",
+			Value:  "unknown author",
 		},
 		cli.StringFlag{
 			Name:   "commit.message",
 			Usage:  "commit message",
 			EnvVar: "DRONE_COMMIT_MESSAGE",
+			Value:  "unset message",
 		},
 		cli.StringFlag{
 			Name:   "build.event",
